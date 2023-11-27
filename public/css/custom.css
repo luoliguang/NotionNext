@@ -6,3 +6,7 @@
 .fa-info:before {
     content: "\f05a";
 }
+.notion-collection-card-property:not(:first-child) {
+    white-space: pre-wrap;
+    text-overflow: clip
+}
