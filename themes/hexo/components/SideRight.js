@@ -65,7 +65,8 @@ export default function SideRight(props) {
       </Card>}
 
       <Announcement post={notice}/>
-      <DateCounter startDate="2023-11-24" futureDate="2024-02-10" /> // 新增组件
+      <DateCounter startDate="2023-11-24" holidayName="春节" holidayDate="2024-02-10" />
+
       {siteConfig('COMMENT_WALINE_SERVER_URL') && siteConfig('COMMENT_WALINE_RECENT') && <HexoRecentComments/>}
 
       <div className='sticky top-20'>
