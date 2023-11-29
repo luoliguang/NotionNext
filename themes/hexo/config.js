@@ -34,5 +34,10 @@ const CONFIG = {
   HEXO_WIDGET_TO_COMMENT: true, // 跳到评论区
   HEXO_WIDGET_DARK_MODE: true, // 夜间模式
   HEXO_WIDGET_TOC: true // 移动端悬浮目录
+    
+  // 添加新的配置项
+  SITE_START_DATE: '2023-11-24', // 网站启动日期
+  HOLIDAY_NAME: '春节', // 节日名称
+  HOLIDAY_DATE: '2024-02-10', // 节日日期
 }
 export default CONFIG
