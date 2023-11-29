@@ -45,11 +45,11 @@ const DateCounter = () => {
   return (
     <div className="flex flex-col items-start justify-start p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
       <div className="text-lg font-semibold text-gray-700 dark:text-gray-300">
-        <h3 className="mb-2"><i class="fa-solid fa-person-running"></i>网站已经运行</h3>
+        <h3 className="mb-2"><i class="fa-solid fa-person-running"></i> 网站已经运行</h3>
         <p className="text-xl">{siteRuntime.days}天 {siteRuntime.hours}小时 {siteRuntime.minutes}分钟 {siteRuntime.seconds}秒</p>
       </div>
       <div className="mt-4 text-lg font-semibold text-gray-700 dark:text-gray-300">
-        <h3 className="mb-2"><i class="fa-solid fa-clock"></i>距离{HOLIDAY_NAME}还有</h3>
+        <h3 className="mb-2"><i class="fa-solid fa-clock"></i> 距离{HOLIDAY_NAME}还有</h3>
         <p className="text-xl">{holidayCountdown.days}天 {holidayCountdown.hours}小时 {holidayCountdown.minutes}分钟 {holidayCountdown.seconds}秒</p>
       </div>
     </div>
