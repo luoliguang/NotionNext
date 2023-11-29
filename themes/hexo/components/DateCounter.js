@@ -6,8 +6,18 @@ const formatDateDifference = (startDate, endDate) => {
   const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-  return { days, hours, minutes, seconds };
+
+  // 将小时、分钟和秒转换为双位数格式
+  const formatDoubleDigit = (num) => num.toString().padStart(2, '0');
+
+  return { 
+    days, 
+    hours: formatDoubleDigit(hours), 
+    minutes: formatDoubleDigit(minutes), 
+    seconds: formatDoubleDigit(seconds) 
+  };
 };
+
 
 const DateCounter = ({ startDate, holidayName, holidayDate }) => {
   const [siteRuntime, setSiteRuntime] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
