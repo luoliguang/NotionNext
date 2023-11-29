@@ -8,6 +8,7 @@ import { AnalyticsCard } from './AnalyticsCard'
 import CONFIG from '../config'
 import dynamic from 'next/dynamic'
 import Announcement from './Announcement'
+import DateCounter from './DateCounter' //新增DateCounter组件
 import { useGlobal } from '@/lib/global'
 import Live2D from '@/components/Live2D'
 import { siteConfig } from '@/lib/config'
@@ -64,7 +65,7 @@ export default function SideRight(props) {
       </Card>}
 
       <Announcement post={notice}/>
-
+      <DateCounter startDate="2023-11-24" futureDate="2024-02-10" /> // 新增组件
       {siteConfig('COMMENT_WALINE_SERVER_URL') && siteConfig('COMMENT_WALINE_RECENT') && <HexoRecentComments/>}
 
       <div className='sticky top-20'>
