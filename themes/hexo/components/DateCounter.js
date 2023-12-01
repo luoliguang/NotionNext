@@ -58,7 +58,7 @@ const DateCounter = () => {
       </div>
       <div className="mt-4 text-lg font-semibold text-gray-700 dark:text-gray-300">
         <h3 className="mb-2"><i class="fa-solid fa-people-pulling"></i> ALREADY IN LOVE</h3>
-        <p className="text-xl">{setStartLove.days}天 {setStartLove.hours}小时 {setStartLove.minutes}分钟 {setStartLove.seconds}秒</p>
+        <p className="text-xl">{startLove.days}天 {startLove.hours}小时 {startLove.minutes}分钟 {startLove.seconds}秒</p>
       </div>
     </div>
   );
