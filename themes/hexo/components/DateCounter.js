@@ -56,9 +56,9 @@ const DateCounter = () => {
         <h3 className="mb-2"><i class="fa-solid fa-clock"></i> 距离{HOLIDAY_NAME}还有</h3>
         <p className="text-xl">{holidayCountdown.days}天 {holidayCountdown.hours}小时 {holidayCountdown.minutes}分钟 {holidayCountdown.seconds}秒</p>
       </div>
-      <div className="text-lg font-semibold text-gray-700 dark:text-gray-300">
-        <h3 className="mb-2"><i class="fa-regular fa-people-pulling"></i> ALREADY IN LOVE</h3>
-        <p className="text-xl">{siteRuntime.days}天 {siteRuntime.hours}小时 {siteRuntime.minutes}分钟 {siteRuntime.seconds}秒</p>
+      <div className="mt-4 text-lg font-semibold text-gray-700 dark:text-gray-300">
+        <h3 className="mb-2"><i class="fa-solid fa-people-pulling"></i> ALREADY IN LOVE</h3>
+        <p className="text-xl">{setStartLove.days}天 {setStartLove.hours}小时 {setStartLove.minutes}分钟 {setStartLove.seconds}秒</p>
       </div>
     </div>
   );
