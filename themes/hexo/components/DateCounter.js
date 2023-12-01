@@ -36,7 +36,7 @@ const DateCounter = () => {
       const now = new Date();
       setSiteRuntime(formatDateDifference(start, now));
       setHolidayCountdown(formatDateDifference(now, holiday));
-      setStartLove(formatDateDifference(start, now)); //love
+      setStartLove(formatDateDifference(startLove, now)); //love
       
     };
 
