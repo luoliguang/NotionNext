@@ -42,6 +42,8 @@ export default function SideRight(props) {
   return (
     <div id='sideRight' className={'space-y-4 lg:w-80 lg:pt-0 px-2 pt-4'}>
       <InfoCard {...props} />
+      <Announcement post={notice}/>
+      
       {siteConfig('HEXO_WIDGET_ANALYTICS', null, CONFIG) && <AnalyticsCard {...props} />}
 
       {showCategory && (
@@ -64,7 +66,6 @@ export default function SideRight(props) {
         <LatestPostsGroup {...props} />
       </Card>}
 
-      <Announcement post={notice}/>
       <DateCounter startDate="2023-11-24" holidayName="春节" holidayDate="2024-02-10" />
 
       {siteConfig('COMMENT_WALINE_SERVER_URL') && siteConfig('COMMENT_WALINE_RECENT') && <HexoRecentComments/>}
