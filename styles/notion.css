@@ -1957,15 +1957,15 @@ svg + .notion-page-title-text {
 /* https://github.com/kchen0x */
 .notion-quote {
   display: block;
-  border-radius: 5px;
+  /* border-radius: 5px; 修改显示圆角*/
   border-color: var(--notion-blue);
   border-left-color: var(--notion-blue);
   background-color: var(--notion-blue_background_co);
   width: 100%;
   white-space: pre-wrap;
   word-break: break-word;
-  border-left: 10px solid;
-  padding: 0.2em 0.9em;
+  border-left: 4px solid;/* 修改为4px 更好看一些*/
+  padding: 0.2em 0.4em; /*左右修改为0.4em 更为好看*/
   margin: 6px 0;
   font-size: 1em;
   /* color: var(--notion-gray); */
