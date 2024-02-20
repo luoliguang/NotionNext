@@ -32,6 +32,9 @@ const BLOG = {
   CONTACT_INSTAGRAM: process.env.NEXT_PUBLIC_CONTACT_INSTAGRAM || '', // 您的instagram地址
   CONTACT_BILIBILI: process.env.NEXT_PUBLIC_CONTACT_BILIBILI || '', // B站主页
   CONTACT_YOUTUBE: process.env.NEXT_PUBLIC_CONTACT_YOUTUBE || '', // Youtube主页
+  CONTACT_WECHAT: process.env.NEXT_PUBLIC_CONTACT_WECHAT || 'luoliguang/NotionNext/my_pic/wechat.jpg', // 微信
+  CONTACT_QQ: process.env.NEXT_PUBLIC_CONTACT_QQ || 'luoliguang/NotionNext/my_pic/qq.jpg', // QQ
+  CONTACT_GZH: process.env.NEXT_PUBLIC_CONTACT_GZH || 'luoliguang/NotionNext/my_pic/微信公众号.jpg', // 微信公众号
 
   NOTION_HOST: process.env.NEXT_PUBLIC_NOTION_HOST || 'https://www.notion.so', // Notion域名，您可以选择用自己的域名进行反向代理，如果不懂得什么是反向代理，请勿修改此项
 

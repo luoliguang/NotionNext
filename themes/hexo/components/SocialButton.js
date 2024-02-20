@@ -38,6 +38,15 @@ const SocialButton = () => {
       {siteConfig('CONTACT_YOUTUBE') && <a target='_blank' rel='noreferrer' title={'youtube'} href={siteConfig('CONTACT_YOUTUBE')} >
         <i className='transform hover:scale-125 duration-150 fab fa-youtube dark:hover:text-indigo-400 hover:text-indigo-600'/>
       </a>}
+      {siteConfig('CONTACT_WECHAT') && <a target='_blank' rel='noreferrer' title={'wechat'} href={siteConfig('CONTACT_WECHAT')} >
+        <i className='transform hover:scale-125 duration-150 fab fa-weixin dark:hover:text-indigo-400 hover:text-indigo-600'/>
+      </a>}
+      {siteConfig('CONTACT_QQ') && <a target='_blank' rel='noreferrer' title={'qq'} href={siteConfig('CONTACT_QQ')} >
+        <i className='transform hover:scale-125 duration-150 fab fa-qq dark:hover:text-indigo-400 hover:text-indigo-600'/>
+      </a>}
+      {siteConfig('CONTACT_GZH') && <a target='_blank' rel='noreferrer' title={'微信公众号'} href={siteConfig('CONTACT_GZH')} >
+        <i className='transform hover:scale-125 duration-150 fab fa-restore dark:hover:text-indigo-400 hover:text-indigo-600'/>
+      </a>}
     </div>
   </div>
 }
