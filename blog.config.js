@@ -32,8 +32,8 @@ const BLOG = {
   CONTACT_INSTAGRAM: process.env.NEXT_PUBLIC_CONTACT_INSTAGRAM || '', // 您的instagram地址
   CONTACT_BILIBILI: process.env.NEXT_PUBLIC_CONTACT_BILIBILI || '', // B站主页
   CONTACT_YOUTUBE: process.env.NEXT_PUBLIC_CONTACT_YOUTUBE || '', // Youtube主页
-  CONTACT_WECHAT: process.env.NEXT_PUBLIC_CONTACT_WECHAT || 'luoliguang/NotionNext/my_pic/wechat.jpg', // 微信
-  CONTACT_QQ: process.env.NEXT_PUBLIC_CONTACT_QQ || 'luoliguang/NotionNext/my_pic/qq.jpg', // QQ
+  CONTACT_WECHAT: process.env.NEXT_PUBLIC_CONTACT_WECHAT || 'https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fffbaf99f-b589-4d6b-8cbf-03fef82794bb%2F096a181a-9338-498b-9995-ae1e099f1707%2FWeChat.jpg?table=block&id=358f0393-9d13-466f-9ad6-a3d0370397a1&t=358f0393-9d13-466f-9ad6-a3d0370397a1', // 微信
+  CONTACT_QQ: process.env.NEXT_PUBLIC_CONTACT_QQ || 'https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fffbaf99f-b589-4d6b-8cbf-03fef82794bb%2Fce261304-a651-4005-b606-879c9bb3434e%2Fqq.jpg?table=block&id=c29b644b-d879-4f3b-b145-fe287f729dd6&t=c29b644b-d879-4f3b-b145-fe287f729dd6', // QQ
   CONTACT_GZH: process.env.NEXT_PUBLIC_CONTACT_GZH || 'luoliguang/NotionNext/my_pic/微信公众号.jpg', // 微信公众号
 
   NOTION_HOST: process.env.NEXT_PUBLIC_NOTION_HOST || 'https://www.notion.so', // Notion域名，您可以选择用自己的域名进行反向代理，如果不懂得什么是反向代理，请勿修改此项
