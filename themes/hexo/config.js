@@ -36,11 +36,11 @@ const CONFIG = {
   HEXO_WIDGET_TOC: true, // 移动端悬浮目录
     
   // 添加新的配置项
-  //SITE_START_DATE: '2023-11-24', // 网站启动日期
+  SITE_START_DATE: '2023-11-24', // 网站启动日期
   /*
   HOLIDAY_NAME: '春节', // 节日名称
   HOLIDAY_DATE: '2024-02-10', // 节日日期
   */
-  SITE_START_LOVE: '2023-02-05',
+  // SITE_START_LOVE: '2023-02-05',
 }
 export default CONFIG
