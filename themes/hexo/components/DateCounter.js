@@ -24,19 +24,19 @@ const formatDateDifference = (startDate, endDate) => {
 const DateCounter = () => {
   const { SITE_START_DATE, HOLIDAY_NAME, HOLIDAY_DATE,SITE_START_LOVE } = CONFIG;
   const [siteRuntime, setSiteRuntime] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  const [holidayCountdown, setHolidayCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  const [startLove, setStartLove] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 }); //love
+  // const [holidayCountdown, setHolidayCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  // const [startLove, setStartLove] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 }); //love
 
   useEffect(() => {
     const start = new Date(SITE_START_DATE);
-    const holiday = new Date(HOLIDAY_DATE);
-    const startLove = new Date(SITE_START_LOVE); //love
+    // const holiday = new Date(HOLIDAY_DATE);
+    // const startLove = new Date(SITE_START_LOVE); //love
 
     const updateCounter = () => {
       const now = new Date();
       setSiteRuntime(formatDateDifference(start, now));
-      setHolidayCountdown(formatDateDifference(now, holiday));
-      setStartLove(formatDateDifference(startLove, now)); //love
+      // setHolidayCountdown(formatDateDifference(now, holiday));
+      // setStartLove(formatDateDifference(startLove, now)); //love
       
     };
 
