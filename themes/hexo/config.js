@@ -41,6 +41,6 @@ const CONFIG = {
   HOLIDAY_NAME: '春节', // 节日名称
   HOLIDAY_DATE: '2024-02-10', // 节日日期
   */
-  // SITE_START_LOVE: '2023-02-05',
+  SITE_START_LOVE: '2023-02-05',
 }
 export default CONFIG
