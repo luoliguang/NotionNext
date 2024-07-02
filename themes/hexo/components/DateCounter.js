@@ -25,18 +25,18 @@ const DateCounter = () => {
   const { SITE_START_DATE, HOLIDAY_NAME, HOLIDAY_DATE,SITE_START_LOVE } = CONFIG;
   const [siteRuntime, setSiteRuntime] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   // const [holidayCountdown, setHolidayCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  // const [startLove, setStartLove] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 }); //love
+  const [startLove, setStartLove] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 }); //love
 
   useEffect(() => {
     const start = new Date(SITE_START_DATE);
     // const holiday = new Date(HOLIDAY_DATE);
-    // const startLove = new Date(SITE_START_LOVE); //love
+    const startLove = new Date(SITE_START_LOVE); //love
 
     const updateCounter = () => {
       const now = new Date();
       setSiteRuntime(formatDateDifference(start, now));
       // setHolidayCountdown(formatDateDifference(now, holiday));
-      // setStartLove(formatDateDifference(startLove, now)); //love
+      setStartLove(formatDateDifference(startLove, now)); //love
       
     };
 
@@ -62,6 +62,8 @@ const DateCounter = () => {
       <div className="text-lg font-semibold text-gray-700 dark:text-gray-300">
         <h3 className="mb-2"><i class="fa-solid fa-person-running"></i> 网站已经运行</h3>
         <p className="text-xl">{siteRuntime.days}天 {siteRuntime.hours}小时 {siteRuntime.minutes}分钟 {siteRuntime.seconds}秒</p>
+        <h3 className="mb-2"><i class="fa-solid fa-people-pulling"></i> ALREADY IN LOVE</h3>
+        <p className="text-xl">{startLove.days}天 {startLove.hours}小时 {startLove.minutes}分钟 {startLove.seconds}秒</p>
       </div>
     </div>
   );
