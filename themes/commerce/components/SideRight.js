@@ -6,11 +6,12 @@ import Catalog from './Catalog'
 import { InfoCard } from './InfoCard'
 import { AnalyticsCard } from './AnalyticsCard'
 import CONFIG from '../config'
-import { siteConfig } from '@/lib/config'
 import dynamic from 'next/dynamic'
 import Announcement from './Announcement'
+// import DateCounter from './DateCounter'
 import { useGlobal } from '@/lib/global'
 import Live2D from '@/components/Live2D'
+import { siteConfig } from '@/lib/config'
 
 const HexoRecentComments = dynamic(() => import('./HexoRecentComments'))
 const FaceBookPage = dynamic(

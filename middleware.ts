@@ -64,8 +64,8 @@ const noAuthMiddleware = async (req: NextRequest, ev: any) => {
  * 鉴权中间件
  */
 const authMiddleware = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
-  ? clerkMiddleware((auth, req) => {
-      const { userId } = auth()
+  ? clerkMiddleware(async (auth, req) => {
+      const { userId } = await auth()
       // 处理 /dashboard 路由的登录保护
       if (isTenantRoute(req)) {
         if (!userId) {
@@ -78,12 +78,14 @@ const authMiddleware = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
 
       // 处理管理员相关权限保护
       if (isTenantAdminRoute(req)) {
-        auth().protect(has => {
-          return (
-            has({ permission: 'org:sys_memberships:manage' }) ||
-            has({ permission: 'org:sys_domains_manage' })
-          )
-        })
+        const { userId } = await auth()
+        if (!userId) {
+          // 未登录，重定向到登录页
+          const url = new URL('/sign-in', req.url)
+          url.searchParams.set('redirectTo', req.url)
+          return NextResponse.redirect(url)
+        }
+        // 系统权限只能在前端页面用 useUser/useAuth 判断
       }
 
       // 默认继续处理请求

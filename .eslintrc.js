@@ -39,12 +39,7 @@ module.exports = {
     'react/prop-types': 'off',
     'space-before-function-paren': 0,
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
-<<<<<<< HEAD
     'camelcase': 'off',
-=======
-    '@typescript-eslint/no-unused-vars': 'off', // 关闭未使用的变量报错
-    '@typescript-eslint/explicit-function-return-type': 'off' // 关闭强制函数返回类型声明
->>>>>>> c68dcb34e2d564c026e54f512565a73025ab32c0
   },
   overrides: [
     {

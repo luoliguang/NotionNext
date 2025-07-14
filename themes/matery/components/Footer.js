@@ -48,22 +48,8 @@ const Footer = ({ title }) => {
         </span>
         <br />
         <h1>{title}</h1>
-<<<<<<< HEAD
         <span className='text-xs '>Powered by <a href='https://www.iiyang.cn' className='underline dark:text-gray-300'>NotionNext {siteConfig('VERSION')}</a>.</span></span><br/>
 
-=======
-        <span className='text-xs '>
-          Powered by{' '}
-          <a
-            href='https://github.com/tangly1024/NotionNext'
-            className='underline dark:text-gray-300'>
-            NotionNext {siteConfig('VERSION')}
-          </a>
-          .
-        </span>
-      </span>
-      <br />
->>>>>>> c68dcb34e2d564c026e54f512565a73025ab32c0
     </footer>
   )
 }
