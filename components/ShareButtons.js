@@ -37,8 +37,8 @@ import {
   TumblrShareButton,
   TwitterIcon,
   TwitterShareButton,
-  ThreadsIcon,
-  ThreadsShareButton,
+  // ThreadsIcon, // 注释掉
+  // ThreadsShareButton, // 注释掉
   ViberIcon,
   ViberShareButton,
   VKIcon,
@@ -314,16 +314,16 @@ const ShareButtons = ({ post }) => {
                 <HatenaIcon size={32} round />
               </HatenaShareButton>
             )
-          case 'threads':
-            return (
-              <ThreadsShareButton
-                key={singleService}
-                url={shareUrl}
-                title={titleWithSiteInfo}
-                className='mx-1'>
-                <ThreadsIcon size={32} round />
-              </ThreadsShareButton>
-            )
+          // case 'threads':
+          //   return (
+          //     <ThreadsShareButton
+          //       key={singleService}
+          //       url={shareUrl}
+          //       title={titleWithSiteInfo}
+          //       className='mx-1'>
+          //       <ThreadsIcon size={32} round />
+          //     </ThreadsShareButton>
+          //   )
           case 'qq':
             return (
               <button

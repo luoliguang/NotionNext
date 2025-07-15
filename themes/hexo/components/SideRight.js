@@ -3,7 +3,7 @@ import { AnalyticsCard } from './AnalyticsCard'
 import CONFIG from '../config'
 import dynamic from 'next/dynamic'
 import Announcement from './Announcement'
-// import DateCounter from './DateCounter' //新增DateCounter组件
+import DateCounter from './DateCounter' // 正确引入DateCounter组件
 import { useGlobal } from '@/lib/global'
 import Live2D from '@/components/Live2D'
 import { siteConfig } from '@/lib/config'
@@ -52,6 +52,7 @@ export default function SideRight(props) {
   return (
       <div id='sideRight' className={className}>
       <InfoCard {...props} />
+      <DateCounter />
       <Announcement post={notice}/>
       
       {siteConfig('HEXO_WIDGET_ANALYTICS', null, CONFIG) && <AnalyticsCard {...props} />}
@@ -61,7 +62,7 @@ export default function SideRight(props) {
           <AnalyticsCard {...props} />
         )}
 
-      <DateCounter startDate="2023-11-24" holidayName="春节" holidayDate="2024-02-10" />
+      {/* <DateCounter startDate="2023-11-24" holidayName="春节" holidayDate="2024-02-10" /> */}
 
         <Announcement post={notice} />
 
