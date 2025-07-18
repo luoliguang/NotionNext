@@ -80,6 +80,12 @@ export const getBaseLayoutByTheme = theme => {
 export const DynamicLayout = props => {
   const { theme, layoutName } = props
   const SelectedLayout = useLayoutByTheme({ layoutName, theme })
+  // 调试输出
+  if (typeof window === 'undefined') {
+    // 只在服务端构建时输出
+    // eslint-disable-next-line no-console
+    console.log('DynamicLayout debug:', { layoutName, SelectedLayoutType: typeof SelectedLayout, SelectedLayout })
+  }
   return <SelectedLayout {...props} />
 }
 

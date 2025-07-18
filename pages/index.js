@@ -1,6 +1,9 @@
 import BLOG from '@/blog.config'
 import { siteConfig } from '@/lib/config'
 import { getGlobalData, getPostBlocks } from '@/lib/db/getSiteData'
+import { generateRobotsTxt } from '@/lib/robots.txt'
+import { generateRss } from '@/lib/rss'
+import { generateSitemapXml } from '@/lib/sitemap.xml'
 import { DynamicLayout } from '@/themes/theme'
 import { generateRedirectJson } from '@/lib/redirect'
 
@@ -53,21 +56,11 @@ export async function getStaticProps(req) {
   }
 
   // 生成robotTxt
-  if (typeof window === 'undefined') {
-    const { generateRobotsTxt } = require('@/lib/robots.txt')
-    generateRobotsTxt(props)
-  }
+  generateRobotsTxt(props)
   // 生成Feed订阅
-  if (typeof window === 'undefined') {
-    const { generateRss } = require('@/lib/rss')
-    await generateRss(props)
-  }
+  generateRss(props)
   // 生成
-  if (typeof window === 'undefined') {
-    // 这里改成动态 require
-    const sitemap = require('@/lib/sitemap.xml')
-    sitemap.generateSitemapXml(props)
-  }
+  generateSitemapXml(props)
   if (siteConfig('UUID_REDIRECT', false, props?.NOTION_CONFIG)) {
     // 生成重定向 JSON
     generateRedirectJson(props)

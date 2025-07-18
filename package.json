@@ -45,8 +45,8 @@
         "nprogress": "^0.2.0",
         "preact": "^10.5.15",
         "prism-themes": "1.9.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
         "react-facebook": "^8.1.4",
         "react-hotkeys-hook": "^4.5.0",
         "react-notion-x": "6.16.0",
@@ -78,7 +78,9 @@
         "webpack-bundle-analyzer": "^4.5.0"
     },
     "resolutions": {
-        "axios": ">=0.21.1"
+        "axios": ">=0.21.1",
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
     },
     "bugs": {
         "url": "https://github.com/tangly/NotionNext/issues",
