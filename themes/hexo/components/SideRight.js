@@ -50,28 +50,16 @@ export default function SideRight(props) {
   }
 
   return (
-      <div id='sideRight' className={className}>
+    <div id='sideRight' className={className}>
       <InfoCard {...props} />
       <DateCounter />
-      <Announcement post={notice}/>
-      
+      <Announcement post={notice} />
       {siteConfig('HEXO_WIDGET_ANALYTICS', null, CONFIG) && <AnalyticsCard {...props} />}
-
-        <InfoCard {...props} />
-        {siteConfig('HEXO_WIDGET_ANALYTICS', null, CONFIG) && (
-          <AnalyticsCard {...props} />
-        )}
-
-      {/* <DateCounter startDate="2023-11-24" holidayName="春节" holidayDate="2024-02-10" /> */}
-
-        <Announcement post={notice} />
-
-        {siteConfig('COMMENT_WALINE_SERVER_URL') &&
-          siteConfig('COMMENT_WALINE_RECENT') && <HexoRecentComments />}
-
-        {rightAreaSlot}
-        <FaceBookPage />
-        <Live2D />
-      </div>
+      {siteConfig('COMMENT_WALINE_SERVER_URL') &&
+        siteConfig('COMMENT_WALINE_RECENT') && <HexoRecentComments />}
+      {rightAreaSlot}
+      <FaceBookPage />
+      <Live2D />
+    </div>
   )
 }
